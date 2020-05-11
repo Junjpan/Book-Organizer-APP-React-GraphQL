@@ -21,7 +21,7 @@ mongoose.connection.once('open',()=>{
 
 app.use('/graphql',graphqlHTTP({
     schema,
-    graphiql:true //mean we'll use graphiql tool when we go to the /graphql
+    graphiql:true //mean we'll use graphiql tool when we go to the /graphql, in the production environment, you might want to make it false
 }));
 
 app.listen(4000,()=>{
